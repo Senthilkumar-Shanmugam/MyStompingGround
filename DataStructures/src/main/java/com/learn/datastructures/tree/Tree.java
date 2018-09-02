@@ -1,4 +1,4 @@
-package java.com.learn.datastructures.tree;
+package com.learn.datastructures.tree;
 
 
 public class Tree {

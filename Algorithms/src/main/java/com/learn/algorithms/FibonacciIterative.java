@@ -1,4 +1,4 @@
-package main.java.com.learn.algorithms;
+package com.learn.algorithms;
 
 public class FibonacciIterative {
 	
