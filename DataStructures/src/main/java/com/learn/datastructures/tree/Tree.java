@@ -52,9 +52,9 @@ public class Tree {
 		return false;
     }
 	
-	private static class Node{
+	public static class Node{
 		int data;
-		private Node left,right;
+		Node left,right;
 		
 		Node(int data){
 			this.data=data;
