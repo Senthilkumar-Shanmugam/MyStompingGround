@@ -78,7 +78,7 @@ public class IterativeDepthFirst {
 
 	public static void main(String[] args) {
 	
-		Node rootNode = new Node(1); 
+		/*Node rootNode = new Node(1); 
 	    Node node2=new Node(2);
 		Node node3=new Node(3);
 		Node node4=new Node(4);
@@ -95,7 +95,26 @@ public class IterativeDepthFirst {
 		node5.left=node6;
  
 		node3.right=node7;
-		node7.right=node8;
+		node7.right=node8;*/
+		Node rootNode = new Node(1); 
+        Node node1m = new Node(-1);
+        Node node11 = new Node(11);
+        Node node2m = new Node(-2);
+        Node node3m = new Node(-3);
+        Node node21 = new Node(21);
+        Node node6 = new Node(6);
+        Node node5 = new Node(5);
+
+        rootNode.left=node1m;
+        rootNode.right=node11;
+        
+        node1m.left=node2m;
+        node1m.right=node3m;
+        
+        node3m.right=node5;
+        node11.left = node21;
+        node11.right= node6;
+
         
 		System.out.println("In order");
 		inOrder(rootNode);
