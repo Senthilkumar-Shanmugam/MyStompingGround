@@ -2,10 +2,12 @@ package com.learn.datastructures.heap;
 
 import java.util.Arrays;
 
+
 public class BinaryMinHeap {
 	public int capacity;
 	public int minHeap[];
 	public int size;
+	
 	
 	public BinaryMinHeap(int capacity){
 		this.capacity=capacity;
