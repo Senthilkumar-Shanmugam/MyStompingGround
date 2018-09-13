@@ -2,35 +2,46 @@ package com.learn.datastructures.linear;
 
 import java.util.Stack;
 
+/**
+ * This soultion uses two stacks..one to add one to pop.
+ * @author seshshan
+ *
+ * @param <T>
+ */
 public class QueueUsingStack<T> {
-	private Stack<T> newElemnts = new Stack<T>();
-	private Stack<T> OldElements= new Stack<T>();
+	private Stack<T> stackNewest,stackOldest;
 	    
-	
-	
-	
 	public QueueUsingStack(){
+		stackNewest = new Stack<T>();
+		stackOldest = new Stack<T>();
 	
 	}
 	
-	public void add(T e){
-		
-		
+	public int size(){
+		return stackNewest.size() + stackOldest.size();
 	}
 	
-	/*public T remove(){
-		
+	public void push(T e){
+	 stackNewest.push(e);	
+	}
+	
+	//do this only when necessary
+	private void shiftStacks(){
+	   if(stackOldest.isEmpty()){
+		  while(!stackNewest.isEmpty())
+			  stackOldest.push(stackNewest.pop());
+	   }
+	}
+	
+	public T pop(){
+		shiftStacks();
+		return stackOldest.pop();
 	}
 	
 	public T peek(){
-		
-	}*/
-	
-	public int size(){
-		return newElemnts.size()+OldElements.size();
-				
+		shiftStacks();
+		return stackOldest.peek();
 	}
 	
 	
-
 }
