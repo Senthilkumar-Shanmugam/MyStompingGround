@@ -18,13 +18,13 @@ public class QueueUsingStack<T> {
 		
 	}
 	
-	public T remove(){
+	/*public T remove(){
 		
 	}
 	
 	public T peek(){
 		
-	}
+	}*/
 	
 	public int size(){
 		return newElemnts.size()+OldElements.size();

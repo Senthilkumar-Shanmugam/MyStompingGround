@@ -1,6 +1,6 @@
+package com.learn.algorithms.general;
 import java.util.Scanner;
 
-package com.learn.algorithms.general;
 
 public class FindTheIndexofSubList {
     public static void main(String args[] ) throws Exception {
