@@ -1,6 +1,6 @@
 package com.practise.design.pattern.creational.abstractfactory;
 
-//import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 public class AbstractFactoryClient {
 
@@ -10,7 +10,7 @@ public class AbstractFactoryClient {
 		//now the factory will return related objects from its factory methods
 		CreditCard card= factory.getCreditCard(CardType.GOLD);
 		
-		
+		DocumentBuilderFactory factory1 = DocumentBuilderFactory.newInstance();
 	}
 
 }

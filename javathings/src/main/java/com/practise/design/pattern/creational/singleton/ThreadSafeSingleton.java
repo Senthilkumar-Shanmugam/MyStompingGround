@@ -1,7 +1,9 @@
 package com.practise.design.pattern.creational.singleton;
 
-public class ThreadSafeSingleton {
+public final class ThreadSafeSingleton {
 	private static ThreadSafeSingleton INSTANCE = null;
+	
+	//Runtime rt = Runtime.getRuntime(); uses eager initialization
 	
 	private ThreadSafeSingleton(){
 		

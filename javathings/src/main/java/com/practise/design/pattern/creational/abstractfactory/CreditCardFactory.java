@@ -4,7 +4,7 @@ import com.practise.design.pattern.creational.abstractfactory.amex.AmexFactory;
 import com.practise.design.pattern.creational.abstractfactory.visa.Visafactory;
 
 /**
- * This is the interface that contains the factory methods
+ * This is the abstract class that contains the factory methods
  * for the products that belong together(family) 
  * might also have method/logic to return a specific factory
  * version based on some config param 
