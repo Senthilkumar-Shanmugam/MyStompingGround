@@ -14,8 +14,10 @@ public class FactoryMethodPatternDemo {
 
 	public static void main(String[] args) {
      AbstractCreator factory = new ConcreteCreator();
-     AbstractProduct product = new ConcreteProduct();
+     AbstractProduct product = factory.factoryMethod();
      product.feature();
+     
+     //Calendar c = Calendar.getInstance(); factory implementation, ResourceBundle,NumberFormat
      
 	}
 
