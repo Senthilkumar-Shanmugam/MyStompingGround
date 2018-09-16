@@ -60,7 +60,6 @@ public class ZigZagTraversal {
 		
 		s1.add(current);
 		
-		boolean rightToLeft = true;
 		while(!s1.isEmpty() || !s2.isEmpty()){
 		   while(!s1.isEmpty()){
 		      Node tmp = s1.pop();

@@ -1,4 +1,4 @@
-package com.practise.java8.patterns;
+package com.practise.java8.patterns.structural.decorator;
 
 public class DecoratorPatternDemo {
 

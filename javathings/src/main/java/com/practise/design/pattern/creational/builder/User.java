@@ -6,6 +6,7 @@ import lombok.ToString;
 
 @Getter
 @ToString
+@EqualsAndHashCode
 public class User {
 	private final String firstName;     //required
     private final String lastName;      //required
