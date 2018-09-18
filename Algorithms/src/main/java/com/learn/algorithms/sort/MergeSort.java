@@ -52,7 +52,6 @@ public class MergeSort {
 		
 		while(j<R.length)
 			a[k++]=R[j++];
-		dummy=100;
 	}
 	
 	private static void display(int[] a){
