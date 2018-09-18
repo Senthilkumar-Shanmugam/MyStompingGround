@@ -8,24 +8,17 @@ public class QuickSort {
 	      System.out.println("\nAfter sorting");
 	      display(input);
 	}
-	private static void sort(int []a){
-		int len=a.length;
-		
-		
-		
-	}
 
-	
-	
 	private static void quicksort(int []items,int leftIndex,int rightIndex){
 		int pivotIndex;
 		
 		//if the partitioned subarray has been reduced to one element, there is no need to continue
 		if(items.length > 1){
+			//partition the list(leftIndex ..rightIndex)..find pivot and rearrange with respect to the pivot
 			pivotIndex = partition(items,leftIndex,rightIndex);
 		    System.out.println("pivot element is :"+items[pivotIndex]);
 		    
-		    //left index hasn't reached the pivot yet.
+		    //now recursively continue finding pivot, rearranging the two halves we have
 		    if(leftIndex < pivotIndex-1)
 		    	quicksort(items,leftIndex,pivotIndex-1);
 		    
