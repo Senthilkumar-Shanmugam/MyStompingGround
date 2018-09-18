@@ -2,7 +2,8 @@ package com.learn.algorithms.sort;
 
 public class QuickSort {
 	public static void main(String []a){
-		  int input[]={14,33,27,20,35,19,42,44};
+		  //int input[]={14,33,27,20,35,19,42,44};
+		int [] input = {19,22,63,105,2,46};
 	      display(input);
 	      quicksort(input,0,input.length-1);
 	      System.out.println("\nAfter sorting");
@@ -10,6 +11,7 @@ public class QuickSort {
 	}
 
 	private static void quicksort(int []items,int leftIndex,int rightIndex){
+		System.out.println("\n QuickSort: <<LeftIndex>>"+leftIndex+" <<rightIndex>> "+rightIndex);
 		int pivotIndex;
 		
 		//if the partitioned subarray has been reduced to one element, there is no need to continue
@@ -33,25 +35,32 @@ public class QuickSort {
 		int pivot = items[(leftIndex+rightIndex)/2];
 		System.out.println("Left: "+leftIndex+" Pivot: "+pivot+" Right: "+rightIndex);
 		
-		//once the left is greater than right, we have finshed sorting with respect to pivot
+		//once the left is greater than right, we have finished sorting with respect to pivot
 		// all left to the pivot are lesser than the pivot.. on the right of pivot are higher
 		//else compare and rearrange the elements with respect to pivot
 		
 		while(leftIndex<=rightIndex){
 			
-			while(items[leftIndex]<pivot)
+			while(items[leftIndex]<pivot){ //keep moving forward the left as long as items on the left is lesser than the pivot
 				leftIndex++;
+                System.out.println("left index is pointing at:"+items[leftIndex]);
+			}
 			
-			while(items[rightIndex]>pivot)
+			while(items[rightIndex]>pivot){//keep moving the right as long as items on the right of pointer is greater than the pivot
 				rightIndex--;
+			    System.out.println("right index is pointing at:"+items[rightIndex]);	
+			}
 			
-			// swap their positions since both of them are out of order
-			swap(items,leftIndex,rightIndex);
-			//move the left and right pointers
-			leftIndex++;
-			rightIndex--;
-		  		
-		   }
+			//Now left and right have stopped at locations(indices) where they are out of order,now 
+			// need to be swapped only left has not passed over right
+			
+			if(leftIndex <= rightIndex){
+				swap(items,leftIndex,rightIndex);
+			    //move the left and right pointers after the swap because elements on that indices are in order now.. move on to the next
+				leftIndex++;
+				rightIndex--;
+		    }
+		  }
 		    System.out.println(" value of left index:"+leftIndex);
      		return leftIndex;//this the nothing but the position we started the method with
      	}
