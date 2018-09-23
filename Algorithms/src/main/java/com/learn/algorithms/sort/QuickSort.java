@@ -54,14 +54,16 @@ public class QuickSort {
 			//Now left and right have stopped at locations(indices) where they are out of order,now 
 			// need to be swapped only left has not passed over right
 			
+			System.out.printf(" \n Now both left and rigt pointers are at:%d,%d",leftIndex,rightIndex);
 			if(leftIndex <= rightIndex){
+				System.out.printf(" \n swapping elements at indices %d <--> %d",leftIndex,rightIndex);
 				swap(items,leftIndex,rightIndex);
 			    //move the left and right pointers after the swap because elements on that indices are in order now.. move on to the next
 				leftIndex++;
 				rightIndex--;
 		    }
 		  }
-		    System.out.println(" value of left index:"+leftIndex);
+		    System.out.println(" \n value of left index(new pivot index):"+leftIndex);
      		return leftIndex;//this the nothing but the position we started the method with
      	}
 		
