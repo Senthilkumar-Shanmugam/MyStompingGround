@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 import java.util.function.UnaryOperator;
 
 interface  Dicounter extends UnaryOperator<BigDecimal>{
-	default Discounter combine(Discounter after){
+	/*default Discounter combine(Discounter after){
 		return value -> after.apply(this.apply(value));
 	}
-}
+*/}
 
 public class FunctionCompositionDemo {
 

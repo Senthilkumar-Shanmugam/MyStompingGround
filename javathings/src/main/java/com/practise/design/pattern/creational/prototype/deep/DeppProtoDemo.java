@@ -4,8 +4,8 @@ public class DeppProtoDemo {
 
 	public static void main(String[] args) {
 		Registry registry = new Registry();
-        Movie movie = (Movie) registry.getItems().get("Movie");
-        System.err.println("runtime >>"+movie.getRuntime());
+       /* Movie movie = (Movie) registry.getItems().get("Movie");
+      System.err.println("runtime >>"+movie.getRuntime());
         movie.setTitle("Creational Patterns in Java");
         movie.setUrl("http://movie.com");
 
@@ -21,6 +21,6 @@ public class DeppProtoDemo {
         System.out.println(anotherMovie.getRuntime());
         System.out.println(anotherMovie.getTitle());
         System.out.println(anotherMovie.getUrl());
-	}
+*/	}
 
 }

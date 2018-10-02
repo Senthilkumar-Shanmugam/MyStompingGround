@@ -13,7 +13,7 @@ public class VericalOrderTraversal {
 		
 		//Iterate through all possible vertical lines starting from min to max(i.e left to right)
 		
-		for(int level=val.min;i<=val.max;level++){
+		for(int level=val.min;level<=val.max;level++){
 			printNodesAtVerticalLevel(node,level);
 		}
 	}

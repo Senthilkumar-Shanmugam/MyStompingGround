@@ -26,7 +26,7 @@ public class Registry {
 
 	private void loadDefaultItems() {
 		Movie movie = new Movie();
-        movie.setTitle("Basic Movie");
+     /*   movie.setTitle("Basic Movie");
         movie.setPrice(24.99);
         movie.setRuntime("2 hours");
         items.put("Movie", movie);
@@ -35,7 +35,7 @@ public class Registry {
         book.setNumberOfPages(335);
         book.setPrice(19.99);
         book.setTitle("Basic Book");
-        items.put("Book", book);	
+      items.put("Book", book);	*/
 	}
 
 }

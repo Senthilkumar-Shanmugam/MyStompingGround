@@ -8,7 +8,7 @@ public class StackwithQueue<T> {
 	}
 	
 	public int size(){
-		
+		return 0;
 	}
 	
 	public static void main(String[] args) {

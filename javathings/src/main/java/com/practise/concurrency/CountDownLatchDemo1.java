@@ -12,10 +12,10 @@ public class CountDownLatchDemo1 {
 	public static void main(String[] args) {
 		List<String> outputScraper = Collections.synchronizedList(new ArrayList<>());
 		CountDownLatch latch = new CountDownLatch(5);
-		List<Thread> workers = Stream.generate(() -> new Thread(new Worker(outputScraper, latch))).limit(5).collect(toList());
+		//List<Thread> workers = Stream.generate(() -> new Thread(new Worker(outputScraper, latch))).limit(5).collect(toList());
 		
-		workers.forEach(Thread::start);
-		latch.await();
+		//workers.forEach(Thread::start);
+		//latch.await();
 				
 	}
 
