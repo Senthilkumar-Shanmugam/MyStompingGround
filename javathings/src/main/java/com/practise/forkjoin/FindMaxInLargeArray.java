@@ -33,13 +33,17 @@ class FindMaxTask extends RecursiveTask<Integer>{
 			FindMaxTask left = new FindMaxTask(largeArray, start, mid, threshold);
 			FindMaxTask right = new FindMaxTask(largeArray, mid, end, threshold);
 
-			left.fork();
+			/*left.fork();
 			right.fork();
 			
 			Integer leftMax = left.join();
 			Integer rightmax = right.join();
 			
-			return (leftMax > rightmax) ? leftMax:rightmax;
+			return Math.max(leftMax, rightMax);*/
+			
+			invokeAll(left,right);
+			return Math.max(left.join(), right.join());
+			
 		}
 		return max;
 	}
