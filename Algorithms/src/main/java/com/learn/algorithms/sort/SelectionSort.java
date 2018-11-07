@@ -1,5 +1,15 @@
 package com.learn.algorithms.sort;
 
+
+/**
+ * Time complexity O(N2)
+ * Space complexity O(1), in place
+ * unstable
+ * internal
+ * comparison sort
+ * @author seshshan
+ *
+ */
 public class SelectionSort {
 	public static void main(String[] args) {
 	       int input[]={14,33,27,20,35,19,42,44};
@@ -19,7 +29,7 @@ public class SelectionSort {
 		private static void sort(int []a){
 			int len=a.length;
 			int minp;
-			for(int i=0;i<len-1;i++){
+			for(int i=0;i<len;i++){
 				minp=i; //starting elem of unsorted arr 
 				for(int j=i+1;j<len-1;j++){ // finds the smallest from unsorted
 					if(a[minp]>a[j])

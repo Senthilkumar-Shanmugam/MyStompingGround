@@ -25,7 +25,7 @@ public class PractiseStringPermutation {
 				//choose
 				char c = s.charAt(i);
 				//explore
-				permuteHelper(s., chosen+c);
+				//permuteHelper(s., chosen+c);
 				
 			}
 			

@@ -2,7 +2,7 @@ package com.learn.algorithms.sort;
 
 public class MergeSort {
 	public static void main(String []a){
-		  int input[]={14,33,27,20,15};//,35,19,42,44};
+		  int input[]={14,33,27,20,15,35,19,42,44};
 	      display(input);
 	      sort(input);
 	      System.out.println("\nAfter sorting");
@@ -20,9 +20,6 @@ public class MergeSort {
 		merge(a,start,mid,end);
 	}
 	private static void merge(int a[],int start,int mid,int end){
-		int dummy=0;
-		System.out.println(dummy);
-		
 		int L[]= new int[mid-start+1];
 		int R[]= new int[end-mid];
 		

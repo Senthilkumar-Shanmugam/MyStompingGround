@@ -1,5 +1,13 @@
 package com.learn.algorithms.sort;
 
+/*
+ * Time Complexity ..O(N2)
+ * Space Complexity O(1).. in place sorting
+ * Stable algoritm.. preserves the order
+ * internal .. requires all data to be in memeory
+ * 
+ * 
+ */
 public class BubbleSort {
 	public static void main(String[] args) {
 		int a[] = { 12, 11, 13, 5, 6 };
@@ -59,7 +67,7 @@ public class BubbleSort {
 		}
 			
 		}
-	recurbubble(a,len-1);
+		recurbubble(a,len-1);
 	}
 	}
 	private static void display(int[] a) {
