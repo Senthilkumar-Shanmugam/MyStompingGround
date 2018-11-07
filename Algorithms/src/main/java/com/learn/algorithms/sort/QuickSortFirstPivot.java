@@ -1,6 +1,6 @@
 package com.learn.algorithms.sort;
 
-public class QuickSortMiddlePivot {
+public class QuickSortFirstPivot {
 	public static void main(String []a){
 		 int input[]={14,33,27,20,35,19,42,44};
 		//int [] input = {19,22,63,105,2,46};
@@ -24,25 +24,25 @@ public class QuickSortMiddlePivot {
 		    	quicksort(items,leftIndex,pivotIndex-1);
 		    
 		    if(rightIndex > pivotIndex)
-		    	quicksort(items,pivotIndex+1,rightIndex);
+		    	quicksort(items,pivotIndex,rightIndex);
 		}
 		
 	}
 	
 	private static int partition(int []items,int leftIndex,int rightIndex){
 		System.out.println("Inside partition");
-		int pivot = items[(leftIndex+rightIndex)/2];
+		int pivot = items[leftIndex];
 		System.out.println("Left: "+leftIndex+" Pivot: "+pivot+" Right: "+rightIndex);
 		
 		//once the left is greater than right, we have finished sorting with respect to pivot
 		// all left to the pivot are lesser than the pivot.. on the right of pivot are higher
 		//else compare and rearrange the elements with respect to pivot
 		
-		while(leftIndex<rightIndex){
+		while(leftIndex<=rightIndex){
 			
 			while(items[leftIndex]<pivot){ //keep moving forward the left as long as items on the left is lesser than the pivot
 				leftIndex++;
-              System.out.println("left index is pointing at:"+items[leftIndex]);
+             System.out.println("left index is pointing at:"+items[leftIndex]);
 			}
 			
 			while(items[rightIndex]>pivot){//keep moving the right as long as items on the right of pointer is greater than the pivot
@@ -66,19 +66,20 @@ public class QuickSortMiddlePivot {
 		    }
 		  }
 		    System.out.println(" \n value of left index(new pivot index):"+leftIndex);
-   		return leftIndex;//this the nothing but the position we started the method with
-   	}
+  		return leftIndex;//this the nothing but the position we started the method with
+  	}
 	
 		
-   private static void swap(int []items,int indexOne,int indexTwo){
-  	 int tmp = items[indexTwo];
-  	 items[indexTwo] = items[indexOne];
-  	 items[indexOne] = tmp;
-   }
+  private static void swap(int []items,int indexOne,int indexTwo){
+ 	 int tmp = items[indexTwo];
+ 	 items[indexTwo] = items[indexOne];
+ 	 items[indexOne] = tmp;
+  }
 	   
 	
 	private static void display(int[] a){
 		for(int i:a)
 			System.out.print(" "+i);
 	}
+
 }
