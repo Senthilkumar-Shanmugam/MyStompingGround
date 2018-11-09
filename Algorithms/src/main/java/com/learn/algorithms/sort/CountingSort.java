@@ -1,6 +1,5 @@
 package com.learn.algorithms.sort;
 
-import java.lang.reflect.Array;
 
 public class CountingSort {
 
@@ -17,7 +16,7 @@ public class CountingSort {
 		int len = arr.length;
 		//create count array
 		int [] count = new int[(maxVal-minVal)+1];
-		
+		int sortedarr[] = new int[len];
 		//create count array
 		for(int i=minVal;i<=maxVal;i++) {
 			count[i]=0;
@@ -33,13 +32,13 @@ public class CountingSort {
 		System.out.println("\nCount array filled:");
 		display(count);
 		
-		//accumulate count array
+		//accumulate count array. to get the actual position of val in sorted array
 		for(int i=1;i<count.length;i++)
-			count[i]=count[i]+count[i-1];
+			count[i]+=count[i-1];
 		
 		System.out.println("\nCount array accumulation:");
 		display(count);
-		//shift array right once
+		/*//shift array right once
 		
 		for(int j=count.length-1;j>0;j--) {
 			count[j]=count[j-1];
@@ -58,6 +57,11 @@ public class CountingSort {
 			//sortedarr[count[arr[i]]++]=i;
 			 sortedarr[count[arr[i]]]=arr[i];
 			 count[arr[i]]++;
+		}*/
+		
+		//build the output array
+		for(int i=0;i<len;i++) {
+			sortedarr[--count[arr[i]]]=arr[i];
 		}
 		
 		System.out.println("\n Sorted array");
