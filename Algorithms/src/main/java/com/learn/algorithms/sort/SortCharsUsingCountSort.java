@@ -32,10 +32,16 @@ public class SortCharsUsingCountSort {
     	   count[i]=count[i]+count[i-1];
        }
        
-       //build the output array
+       //build the output array,doing it in reverse so as to make it stable
        for(int i=len-1;i>=0;i--) {
-    	   
+    	   output[count[arr[i]]-1] = arr[i];
+    	   count[arr[i]]-=1;
        }
+       
+    // Copy the output array to arr, so that arr now 
+       // contains sorted characters 
+       for (int i = 0; i<len; ++i) 
+           arr[i] = output[i]; 
        
 	}
 
