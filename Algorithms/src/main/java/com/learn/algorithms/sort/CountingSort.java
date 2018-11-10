@@ -59,11 +59,16 @@ public class CountingSort {
 			 count[arr[i]]++;
 		}*/
 		
-		//build the output array
+		/*//build the output array
 		for(int i=0;i<len;i++) {
 			sortedarr[--count[arr[i]]]=arr[i];
-		}
+		}*/
 		
+		//build the output array,doing it in reverse so as to make it stable
+	       for(int i=len-1;i>=0;i--) {
+	    	   sortedarr[count[arr[i]]-1] = arr[i];
+	    	   count[arr[i]]-=1;
+	       }
 		System.out.println("\n Sorted array");
 		display(sortedarr);
 	}

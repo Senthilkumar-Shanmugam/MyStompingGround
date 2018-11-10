@@ -61,34 +61,14 @@ public class RadixSort {
 			count[digit] += 1;
 		}
 		
-		/*System.out.println("\nCount array filled:");
-		display(count);*/
-		
 		//accumulate count array. to get the actual position of val in sorted array
 		for(int i=1;i<count.length;i++)
 			count[i]+=count[i-1];
 		
-		/*System.out.println("\nCount array accumulation:");
-		display(count);*/
-		//shift array right once
-		
-		for(int j=count.length-1;j>0;j--) {
-			count[j]=count[j-1];
-		}
-		count[0]=0;
-		/*
-		System.out.println("\nCount array shifted:");
-		display(count);*/
-		
-		
-		//final step.1.Iterate the original array
-		//2. for each value i go to index i in count array. get that value which will be index of value i in sorted array
-		// increment value at index i in count array by 1 .. to handle duplicate values
-		for(int i=0;i<arr.length;i++) {
-			//sortedarr[count[arr[i]]++]=i;
-			 sortedarr[count[arr[i]]]=arr[i];
-			 count[arr[i]]++;
-		}
+		for(int i=len-1;i>=0;i--) {
+	    	 sortedarr[count[arr[i]]-1] = arr[i];
+	    	 count[arr[i]]-=1;
+	      }
 		
 		System.out.println("\n Sorted array");
 		print(sortedarr,sortedarr.length);
