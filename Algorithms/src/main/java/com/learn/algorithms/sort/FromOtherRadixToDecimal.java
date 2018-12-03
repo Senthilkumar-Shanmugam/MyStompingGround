@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class FromOtherRadixToDecimal {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
        Scanner in = new Scanner(System.in);
        System.out.println("Enter the number");
        int num = in.nextInt();
@@ -15,9 +15,12 @@ public class FromOtherRadixToDecimal {
 	  
 	  while(num>0) {
 		  int last_digit = num%10;
+		  
+		  if(last_digit > radix -1)
+			  throw new Exception("Invalid number for this radix"+radix);
 		  num /= 10;
 		  decimal += (last_digit*base);
-		  base *= 2;
+		  base *= radix;
 	  }
 	  System.out.println("Decimal Value is >>"+decimal);
 	}
