@@ -1,5 +1,7 @@
 package com.example.java8;
 
+
+
 public class AnonymousClassOverrideExample {
 
 	public static void main(String[] args) {
@@ -22,9 +24,10 @@ public class AnonymousClassOverrideExample {
 		exp.method1();
 		exp.method2();
 	}
-
+	
 }
 
+//@FunctionalInterface
 interface Expriment{
 	void method1();
 	void method2();
