@@ -2,3 +2,14 @@ Close is a special type of lambda. But not all lambdas are closure
 
 Lambda is an anonymous block of function that depends on its arguments
 Closure has dp=ependecny on environment variable, it closes over
+
+
+ (server) -> server.isRunning()   -- This is lambda
+ 
+ () -> server.isRunning --> closure, here server is env. It needs to close that env/capture that variable
+ 
+ 
+ closure is an instance of function. In lambda there are no instances(it cannot refernce variables outside the lexical scope)
+ 
+ since lambda has no outside dependencies, it is evaluvates only one and can be reused without the fear of side effects. whereas closure needs
+ to be evaluvated everytime
