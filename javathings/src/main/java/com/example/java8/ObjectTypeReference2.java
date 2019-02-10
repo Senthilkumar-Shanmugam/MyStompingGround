@@ -23,11 +23,11 @@ public class ObjectTypeReference2 {
 		};
 		
 		
-		//Lambda expression
+		//Lambda expression,see the types are omitted
 		TriFunction<Sum,String,String,Integer> lambda = (s,s1,s2) -> s.doSum(s1, s2);
 		System.out.println("sum:"+ lambda.apply(new Sum(), "10", "11"));
 		
-		//method Reference
+		//method Reference, no arguments
 		TriFunction<Sum,String,String,Integer> mRef = Sum::doSum;
 		System.out.println("sum:"+ mRef.apply(new Sum(), "10", "11"));
 
