@@ -1,3 +1,4 @@
+/*
 package com.example.java8;
 
 import java.util.function.Consumer;
@@ -40,3 +41,4 @@ public class ExistingObjectMethodReference {
 		c.accept(car);
 	}
 }
+*/

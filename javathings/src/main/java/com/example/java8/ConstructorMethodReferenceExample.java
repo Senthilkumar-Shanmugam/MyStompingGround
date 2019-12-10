@@ -26,9 +26,9 @@ public class ConstructorMethodReferenceExample {
 	    //using lambda
 		Supplier<List<String>> s2 = () -> new ArrayList<String>();
 		s2.get();
-		
-		//Supplier<List<String>> s3 = Supplier<List::new; needs to be fixed, try another case
-		
+
+		//Supplier<List> s3 = ConstructorMethodReferenceExample::get;
+
 		//anonymous class
 		Function<String,Integer> f = new Function<String,Integer>(){
 			@Override
@@ -47,6 +47,10 @@ public class ConstructorMethodReferenceExample {
 		f3.apply("101");
 		
 	}
+
+	/*private static List get() {
+		return ArrayList::new;
+	}*/
 }
 
 @Data

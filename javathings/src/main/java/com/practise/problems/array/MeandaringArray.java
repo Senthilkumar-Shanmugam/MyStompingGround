@@ -3,11 +3,12 @@ package com.practise.problems.array;
 import java.util.Arrays;
 
 /**
- * Rearrange an array in order – largest, 2nd smallest, 2nd largest
+ * Rearrange an array in order ï¿½ largest, 2nd smallest, 2nd largest
  * 
  * @author seshshan
  *
  */
+@SuppressWarnings("LossyEncoding")
 public class MeandaringArray {
 
 	public static void main(String[] args) {
